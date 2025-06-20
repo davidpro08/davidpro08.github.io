@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "일주일 아무 얘기기"
+title:  "일주일 아무 얘기"
 date:   2025-06-21 04:04:00 +0900
 categories: [일기]
 ---
