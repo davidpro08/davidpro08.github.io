@@ -1,7 +1,16 @@
 title: the Simplex theme
 logo_img: /assets/img/icons/Title_Icon.jpg
 favicon: /assets/favicon.ico
-description: description
+description: |
+  안녕하세요, 문재현입니다.  
+  이 블로그는 저의 성장과 기록을 남기기 위해 시작했습니다.
+
+  앞으로 개발, 일상, 공부, 습관 관리 등 다양한 주제로 글을 올릴 예정입니다.  
+  저와 비슷한 고민을 가진 분들께 도움이 되었으면 좋겠습니다.
+
+  방문해주셔서 감사합니다.  
+  댓글이나 피드백은 언제든 환영합니다!
+
 global_tags: jekyll theme simplex golasblog responsive html5
 copyright: © Golasowski 2021
 
@@ -12,7 +21,7 @@ collections:
     category:
         output: true
     authors:
-        output: false
+        output: true
 
 defaults:
   -
@@ -31,8 +40,6 @@ timezone : Asia/Seoul
 title : 난1렙이요의 블로그
 
 tagline : 여러저러 하는 블로그
-
-description : 기록하지 않으면 사라진다는 관점 아래서 대부분을 기록하려 하는 공간
 
 url : https://davidpro08.github.io
 
@@ -57,6 +64,29 @@ giscus:
   category_id: DIC_kwDOMe0I5c4Cgl5Y
   mapping: pathname
   lang: ko
+
+category_map:
+  일기:
+    title: "일기"
+    color: "#ffcc00"
+  지식:
+    title: "지식"
+    color: "#00bfff"
+  프로젝트:
+    title: "프로젝트"
+    color: "#ff99cc"
+  CS:
+    title: "CS"
+    color: "#aaff99"
+  학교 공부 정리:
+    title: "학교 공부 정리"
+    color: "#ffccff"
+  일상:
+    title: "일상"
+    color: "#cccccc"
+  습관 잡기:
+    title: "습관 잡기"
+    color: "#ff9966"
 
 
 

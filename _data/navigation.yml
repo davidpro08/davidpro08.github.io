@@ -1,0 +1,16 @@
+- title: Home
+  url: /
+  icon: assets/img/icons/home.svg
+  hue: "#ffcc00"
+- title: 블로그
+  url: blog/
+  icon: assets/img/icons/book.svg
+  hue: "#00bfff"
+- title: 프로젝트
+  url: project/
+  icon: assets/img/icons/document.svg
+  hue: "#ff99cc"
+- title: 일상
+  url: daily/
+  icon: assets/img/icons/chat.svg
+  hue: "#cccccc"
