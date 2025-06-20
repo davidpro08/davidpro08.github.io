@@ -21,3 +21,44 @@ defaults:
       type: category
     values:
       layout: "category"
+
+lang : ko-KR
+
+timezone : Asia/Seoul
+
+title : 난1렙이요의 블로그
+
+tagline : 여러저러 하는 블로그
+
+description : 기록하지 않으면 사라진다는 관점 아래서 대부분을 기록하려 하는 공간
+
+url : https://davidpro08.github.io
+
+github_username : davidpro08
+github_repo : davidpro08.github.io
+github_url : https://github.com/davidpro08
+
+author : 문재현
+author_email : davidmoon0817@gmail.com
+author_github : https://github.com/davidpro08
+
+avatar : /assets/img/icons/Title_Icon.jpg
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Giscus comments
+giscus:
+  repo: davidpro08/davidpro08.github.io
+  repo_id: R_kgDOMe0I5Q
+  category: Comments
+  category_id: DIC_kwDOMe0I5c4Cgl5Y
+  mapping: pathname
+  lang: ko
+
+
+
+
+
