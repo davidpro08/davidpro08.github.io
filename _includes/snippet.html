@@ -17,11 +17,16 @@
     <section class="snippet__data">
         <section class="snippet__data__metadata">
             <section class="snippet__data__metadata__category">
-                {% for category in post.category %}
-                    <p class="snippet__data__metadata__category__title" style="background: {{ site.category | where: "category", category | map: "hue"}}">{{ site.category | where: "category", category | map: "title"}}</p>
+                {% if post.categories %}
+                    <div class="post-categories">
+                        {% for category in post.categories %}
+                            {% assign cat = site.category_map[category] %}
+                            <span class="category" style="background: {{ cat.color }};">{{ cat.title }}</span>
+                        {% endfor %}
+                    </div>
                 {% else %}
-                    <p class="snippet__data__metadata__category__title">No category</p>
-                {% endfor %}
+                    <span class="category">No Category</span>
+                {% endif %}
             </section>
             <p class="snippet__data__metadata__date">{{ post.date | date: '%B %d, %Y' }}</p>
         </section>
