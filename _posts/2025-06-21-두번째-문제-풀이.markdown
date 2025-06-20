@@ -1,0 +1,130 @@
+---
+layout: post
+title:  "두번째 문제 풀이"
+date:   2025-06-21 04:04:00 +0900
+categories: [CS]
+---
+
+# 테스트 환경을 구축해보자자
+
+>정수 a와 b가 주어집니다. 각 수를 입력받아 입출력 예와 같은 형식으로 출력하는 코드를 작성해 보세요.
+
+두 번째 문제는 a와 b를 출력하는 문제였다.
+
+이전
+
+```js
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', function (line) {
+    input = [line];
+}).on('close',function(){
+    str = input[0];
+});
+```
+
+이후
+```js
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', function (line) {
+    input = line.split(' ');
+}).on('close', function () {
+    console.log(Number(input[0]) + Number(input[1]));
+});
+```
+
+## 이건 아마도
+바뀐 부분은 .on 뒤의 함수 실행 부분이었다. 아마 숫자 두 개를 합쳐서 그 값을 출력하는 코드인 것 같아 보인다.
+그래서 "된 거 아닌가?" 라고 생각하고 그대로 실행했는데, 바로 틀렸다... 그 이유는 더하기 값이 아닌 출력 형식을 맞춰서 출력해야 하기 때문이다. 이게 바로 문제 안 읽는 사람들을 때리기 위한 페이크인 거 같다.
+
+## 테스트가 필요해
+자바나 C같은 건 테스트 환경을 구축하고, 그 안에서 입력과 출력을 확인할 수 있었다. 근데 JS는 어떻게 하는 지를 모르겠어서 방법을 찾아봤다.
+
+방법은 간단했다.
+1. js 파일을 아무거나 만든다.
+2. 실행할 코드를 js 파일 안에 넣는다.
+3. 터미널에서 아래 형식으로 실행한다.
+
+```bash
+echo "10 20" | node test/testscipt.js
+```
+
+echo를 통해 입력을 넣을 수 있고, 출력도 터미널에 그대로 찍힌다.
+
+```bash
+echo "4 5" | node test/testscipt.js
+4 5
+9
+```
+
+# 이제 진짜 문제 풀어보자
+
+## 문제 영역
+
+### **문제 설명**
+정수 `a`와 `b`가 주어집니다. 각 수를 입력받아 입출력 예와 같은 형식으로 출력하는 코드를 작성해 보세요.
+
+---
+### 제한사항
+- 100,000 ≤ `a`, `b` ≤ 100,000
+---
+### 입출력 예
+
+입력 #1
+```
+`4 5`
+```
+출력 #1
+```
+`a = 4
+b = 5`
+```
+
+## 설계 영역
+주어진 출력이 나오도록 console.log 안을 조정하면 될 것 같다.
+1. 지금 더하기 코드가 나와있는데, 이건 페이크다.
+2. a = 4, b = 5 이런 식으로 콘솔 안에 써 넣으면 될 것 같다.
+3. 값만 input 값으로 바꿔주기
+
+## 결과 코드
+```js
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', function (line) {
+    input = line.split(' ');
+}).on('close', function () {
+    console.log("a = " + input[0]);
+    console.log("b = " + input[1]);
+});
+```
+
+echo "" | node test/testscipt.js
+
+```bash
+echo "4 5" | node test/testscipt.js  
+4 5
+a = 4
+b = 5
+```
+
+## 느낀점
+잘 작동하는 걸 확인할 수 있으며, 테스트 환경도 구현했으므로 이젠 달리는 것 밖에 남아있지 않다. 쭉 달리면서 모르는 문법 있으면 적는 식으로 빠르게 문제풀이를 해보겠다.
