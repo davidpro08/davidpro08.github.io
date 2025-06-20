@@ -111,5 +111,6 @@ rl.on('line', function (line) {
 
 ## 첫 문제 해결
 야호! JS로 처음 문제를 해결했다.
-![JS로 첫 문제 해결결](/assets/img/image/JS문법부터알아보자1.png)
+![JS로 첫 문제 해결](/assets/img/image/2025-06-21_JS문법부터알아보자1.png)
+
 이렇게 모르는 걸 하나씩 배워가면서 문제를 풀면 될 것 같다.
