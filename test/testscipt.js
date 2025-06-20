@@ -4,11 +4,6 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let input = [];
-
-rl.on('line', function (line) {
-    input = line.split(' ');
-}).on('close', function () {
-    console.log("a = " + input[0]);
-    console.log("b = " + input[1]);
+rl.on('close', function () {
+    console.log("\!\@\#\$\%\^\&\*\(\\\'\"\<\>\?\:\;");
 });
