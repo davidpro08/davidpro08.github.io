@@ -1,5 +1,5 @@
 title: the Simplex theme
-logo_img: /assets/img/icons/golasblog_logo.svg
+logo_img: /assets/img/icons/Title_Icon.jpg
 favicon: /assets/favicon.ico
 description: description
 global_tags: jekyll theme simplex golasblog responsive html5
@@ -24,6 +24,8 @@ defaults:
 
 lang : ko-KR
 
+avatar : /assets/img/icons/Title_icon.png
+
 timezone : Asia/Seoul
 
 title : 난1렙이요의 블로그
@@ -41,8 +43,6 @@ github_url : https://github.com/davidpro08
 author : 문재현
 author_email : davidmoon0817@gmail.com
 author_github : https://github.com/davidpro08
-
-avatar : /assets/img/icons/Title_Icon.jpg
 
 plugins:
   - jekyll-seo-tag
