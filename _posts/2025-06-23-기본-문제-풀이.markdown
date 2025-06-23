@@ -1,0 +1,231 @@
+---
+layout: post
+title:  "기본 문제 풀이"
+date:   2025-06-23 22:54:00 +0900
+categories: [CS]
+---
+# 푸는 속도가 너무 느리다. 기록을 간단하게 하고 빠르게 정리하자.
+
+기록하는 것은 좋지만, 기본 문제에서는 복잡한 로직이 필요 없다. 문제와 코드만 기록하고 빠르게 다음으로 넘어가자.
+
+## 나머지 구하기
+정수 num1, num2가 매개변수로 주어질 때, num1를 num2로 나눈 나머지를 return 하도록 solution 함수를 완성해주세요.
+
+```js
+function solution(num1, num2) {
+    return num1%num2;
+}
+```
+
+
+## 나이 출력
+머쓱이는 선생님이 몇 년도에 태어났는지 궁금해졌습니다. 2022년 기준 선생님의 나이 age가 주어질 때, 선생님의 출생 연도를 return 하는 solution 함수를 완성해주세요
+
+```js
+function solution(age) {
+    return 2023 - age;
+}
+```
+
+## 각도기
+
+각에서 0도 초과 90도 미만은 예각, 90도는 직각, 90도 초과 180도 미만은 둔각 180도는 평각으로 분류합니다. 각 angle이 매개변수로 주어질 때 예각일 때 1, 직각일 때 2, 둔각일 때 3, 평각일 때 4를 return하도록 solution 함수를 완성해주세요.
+
+예각 : 0 < angle < 90
+직각 : angle = 90
+둔각 : 90 < angle < 180
+평각 : angle = 180
+
+```js
+function solution(angle) {
+    if(angle<90) return 1;
+    if(angle==90) return 2;
+    if(angle<180) return 3;
+    if(angle==180) return 4;
+}
+```
+
+## 양꼬치
+
+머쓱이네 양꼬치 가게는 10인분을 먹으면 음료수 하나를 서비스로 줍니다. 양꼬치는 1인분에 12,000원, 음료수는 2,000원입니다. 정수 n과 k가 매개변수로 주어졌을 때, 양꼬치 n인분과 음료수 k개를 먹었다면 총얼마를 지불해야 하는지 return 하도록 solution 함수를 완성해보세요.
+
+```js
+function solution(n, k) {
+    limit = n/10;
+    drink = k;
+    
+    for(i = 1; i<=n/10; i++){
+        if(drink==0) return (n*12000);
+        drink--;
+    }
+    
+    return (n*12000 + drink*2000);
+}
+```
+
+## 짝수의 합
+
+정수 n이 주어질 때, n이하의 짝수를 모두 더한 값을 return 하도록 solution 함수를 작성해주세요.
+
+```js
+function solution(n) {
+    sum = 0;
+    for(i=2; i<=n; i+=2) sum+=i;
+    return sum;
+}
+```
+
+## 배열의 평균 값
+
+정수 배열 numbers가 매개변수로 주어집니다. numbers의 원소의 평균값을 return하도록 solution 함수를 완성해주세요.
+
+```js
+function solution(numbers) {
+    let sum = 0;
+    
+    numbers.forEach((number)=>{
+        sum+=number;
+    });
+    
+    return sum/numbers.length;
+}
+```
+
+## 배열 뒤집기
+
+정수가 들어 있는 배열 num_list가 매개변수로 주어집니다. num_list의 원소의 순서를 거꾸로 뒤집은 배열을 return하도록 solution 함수를 완성해주세요.
+
+```js
+function solution(num_list) {
+    var answer = [];
+    
+    num_list.forEach((number) =>{
+        answer.unshift(number);
+    });
+
+    return answer;
+}
+```
+
+## 제곱수 판별하기
+
+어떤 자연수를 제곱했을 때 나오는 정수를 제곱수라고 합니다. 정수 n이 매개변수로 주어질 때, n이 제곱수라면 1을 아니라면 2를 return하도록 solution 함수를 완성해주세요.
+
+```js
+function solution(n) {
+    
+    const D = Math.floor(Math.sqrt(n));
+    
+    for(i=2; i<=D; i++){
+        if(i*i == n) return 1;
+    }
+    
+    return 2;
+}
+```
+
+## 짝수 홀수 개수
+
+정수가 담긴 리스트 num_list가 주어질 때, num_list의 원소 중 짝수와 홀수의 개수를 담은 배열을 return 하도록 solution 함수를 완성해보세요.
+
+```js
+function solution(num_list) {
+    var answer = [0, 0];
+    
+    num_list.forEach((number) => {
+       if(number%2==0) answer[0]++;
+        else answer[1]++;
+    });
+    
+    return answer;
+}
+```
+
+## 특정 문자 제거하기
+
+문자열 my_string과 문자 letter이 매개변수로 주어집니다. my_string에서 letter를 제거한 문자열을 return하도록 solution 함수를 완성해주세요.
+
+```js
+function solution(my_string, letter) {
+    var answer = '';
+    const length = my_string.length;
+    
+    for(i=0; i<length; i++){
+        if(my_string[i] != letter) answer += my_string[i];
+    }
+    
+    return answer;
+}
+```
+
+## 뒤집힌 문자열
+
+문자열 my_string이 매개변수로 주어집니다. my_string을 거꾸로 뒤집은 문자열을 return하도록 solution 함수를 완성해주세요.
+
+```js
+function solution(my_string) {
+    var answer = '';
+    
+    const length = my_string.length;
+    
+    for(i=length-1; i>=0; i--){
+        answer += my_string[i];
+    }
+    
+    return answer;
+}
+```
+
+## 편지
+
+머쓱이는 할머니께 생신 축하 편지를 쓰려고 합니다. 할머니가 보시기 편하도록 글자 한 자 한 자를 가로 2cm 크기로 적으려고 하며, 편지를 가로로만 적을 때, 축하 문구 message를 적기 위해 필요한 편지지의 최소 가로길이를 return 하도록 solution 함수를 완성해주세요.
+
+```js
+function solution(my_string) {
+    return message.length * 2;
+}
+```
+
+## 피자 나눠 먹기 (1)
+
+머쓱이네 피자가게는 피자를 일곱 조각으로 잘라 줍니다. 피자를 나눠먹을 사람의 수 n이 주어질 때, 모든 사람이 피자를 한 조각 이상 먹기 위해 필요한 피자의 수를 return 하는 solution 함수를 완성해보세요.
+
+```js
+function solution(n) {
+    return Math.floor((n-1)/7)+1;
+}
+```
+
+## 세균 증식
+
+어떤 세균은 1시간에 두배만큼 증식한다고 합니다. 처음 세균의 마리수 n과 경과한 시간 t가 매개변수로 주어질 때 t시간 후 세균의 수를 return하도록 solution 함수를 완성해주세요.
+
+
+```js
+function solution(n, t) {
+    for(i=1; i<=t; i++){
+        n*=2;
+    }
+    return n;
+}
+```
+
+## 최댓값 만들기(1)
+
+정수 배열 numbers가 매개변수로 주어집니다. numbers의 원소 중 두 개를 곱해 만들 수 있는 최댓값을 return하도록 solution 함수를 완성해주세요.
+
+```js
+function solution(n, t) {
+    for(i=1; i<=t; i++){
+        n*=2;
+    }
+    return n;
+}
+```
+
+# 정리
+오늘은 여기까지!
+전날 했던 것 까지 합해서 총 20문제 풀었다.
+1. Math.floor는 내림, Math.ceil은 올림이다.
+2. reverse로 문자열 순서를 바꿀 수 있고, join으로 문자열을 나눌 수 있다.
+3. *2면 비트 연산자 사용해보기
