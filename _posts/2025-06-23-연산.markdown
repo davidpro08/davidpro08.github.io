@@ -1,0 +1,503 @@
+---
+layout: post
+title:  "연산"
+date:   2025-06-21 16:11:00 +0900
+categories: [CS]
+---
+# 연산 문제들을 빠르게 정리한다.
+
+## 문제 영역
+
+### **문제 설명**
+
+정수 `num1`과 `num2`가 주어질 때, `num1`과 `num2`의 합을 return하도록 soltuion 함수를 완성해주세요.
+
+### 제한사항
+
+- 50,000 ≤ `num1` ≤ 50,000
+- 50,000 ≤ `num2` ≤ 50,000
+
+### **입출력 예**
+
+| num1 | num2 | result |
+| --- | --- | --- |
+| 2 | 3 | 5 |
+| 100 | 2 | 102 |
+
+### 입출력 예 설명
+
+입출력 예 #1
+
+- `num1`이 2이고 `num2`가 3이므로 2 + 3 = 5를 return합니다.
+
+입출력 예 #2
+
+- `num1`이 100이고 `num2`가 2이므로 100 + 2 = 102를 return합니다.
+
+## 설계 영역
+자바스크립트 덧셈을 사용하기기
+1. 정수 2개를 받는다.
+2. 둘이 더한다.
+3. 값을 출력한다.
+
+## 결과 코드
+```js
+function solution(num1, num2) {
+    var answer = -1;
+    answer = Number(num1)+Number(num2);
+    return answer;
+}
+```
+
+## 느낀점
+1. 문제를 잘 읽고 함수만 구현하는지, 출력하는 지 확인하기
+2. 덧셈 (+) 연산은 기본적으로 문자열 덧셈. 숫자끼리 덧셈하려면 자료형 명시
+
+---
+
+## 문제 영역
+
+### **문제 설명**
+
+정수 `num1`과 `num2`가 주어질 때, `num1`에서 `num2`를 뺀 값을 return하도록 soltuion 함수를 완성해주세요.
+
+### 제한사항
+
+- 50000 ≤ `num1` ≤ 50000
+- 50000 ≤ `num2` ≤ 50000
+
+### **입출력 예**
+
+| num1 | num2 | result |
+| --- | --- | --- |
+| 2 | 3 | -1 |
+| 100 | 2 | 98 |
+
+### 입출력 예 설명
+
+입출력 예 #1
+
+- `num1`이 2이고 `num2`가 3이므로 2 - 3 = -1을 return합니다.
+
+입출력 예 #2
+
+- `num1`이 100이고 `num2`가 2이므로 100 - 2 = 98을 return합니다.
+
+## 설계 영역
+1. 두 값 빼기
+2. 반환
+
+## 결과 코드
+```js
+function solution(num1, num2) {
+    return num1 - num2;
+}
+```
+
+## 느낀점
+1. 심지어 아주 간단하게 구현도 가능하다.
+2. 코드를 극한으로 줄이는 것도 가능
+
+---
+
+## 문제 영역
+
+### **문제 설명**
+
+정수 `num1`, `num2`가 매개변수 주어집니다. `num1`과 `num2`를 곱한 값을 return 하도록 solution 함수를 완성해주세요.
+
+### **제한사항**
+
+- 0 ≤ `num1` ≤ 100
+- 0 ≤ `num2` ≤ 100
+
+### **입출력 예**
+
+| num1 | num2 | result |
+| --- | --- | --- |
+| 3 | 4 | 12 |
+| 27 | 19 | 513 |
+
+### **입출력 예 설명**
+
+입출력 예 #1
+
+- `num1`이 3, `num2`가 4이므로 3 * 4 = 12를 return합니다.
+
+입출력 예 #2
+
+- `num1`이 27, `num2`가 19이므로 27 * 19 = 513을 return합니다.
+
+## 설계 영역
+1. 두 값 곱하기
+2. 반환
+
+## 결과 코드
+```js
+function solution(num1, num2) {
+    var answer = num1 * num2;
+    return answer;
+}
+```
+
+---
+
+## 문제 영역
+
+### **문제 설명**
+
+정수 `num1`, `num2`가 매개변수 주어집니다. `num1`과 `num2`를 곱한 값을 return 하도록 solution 함수를 완성해주세요.
+
+### **제한사항**
+
+- 0 ≤ `num1` ≤ 100
+- 0 ≤ `num2` ≤ 100
+
+### **입출력 예**
+
+| num1 | num2 | result |
+| --- | --- | --- |
+| 3 | 4 | 12 |
+| 27 | 19 | 513 |
+
+### **입출력 예 설명**
+
+입출력 예 #1
+
+- `num1`이 3, `num2`가 4이므로 3 * 4 = 12를 return합니다.
+
+입출력 예 #2
+
+- `num1`이 27, `num2`가 19이므로 27 * 19 = 513을 return합니다.
+
+## 설계 영역
+1. 두 값 곱하기
+2. 반환
+
+## 결과 코드
+```js
+function solution(num1, num2) {
+    var answer = num1 * num2;
+    return answer;
+}
+```
+---
+
+### **문제 설명**
+
+정수 `num1`, `num2`가 매개변수로 주어질 때, `num1`을 `num2`로 나눈 몫을 return 하도록 solution 함수를 완성해주세요.
+
+### 제한사항
+
+- 0 < `num1` ≤ 100
+- 0 < `num2` ≤ 100
+
+### 입출력 예
+
+| num1 | num2 | result |
+| --- | --- | --- |
+| 10 | 5 | 2 |
+| 7 | 2 | 3 |
+
+### 입출력 예 설명
+
+입출력 예 #1
+
+- `num1`이 10, `num2`가 5이므로 10을 5로 나눈 몫 2를 return 합니다.
+
+입출력 예 #2
+
+- `num1`이 7, `num2`가 2이므로 7을 2로 나눈 몫 3을 return 합니다.
+
+## 설계 영역
+1. 두 값 "/" 연산자로 나누기
+2. 반환
+
+## 결과 코드
+```js
+function solution(num1, num2) {
+    var answer = Math.floor(num1/num2);
+    return answer;
+}
+```
+
+## 느낀점
+JS에는 정수형과 실수형을 엄밀하게 구분하지 않는 것(int, float 말고 Number로 뭉게서 활용) 같다. 그래서 Math.floor를 사용했는데, 아마 정수형과 실수형으로 나눌 수 있다면 정수형으로 형 변환을 한 뒤 출력했을 것이다.
+
+---
+
+### **문제 설명**
+
+정수 `num1`과 `num2`가 매개변수로 주어질 때, `num1`을 `num2`로 나눈 값에 1,000을 곱한 후 정수 부분을 return 하도록 solution 함수를 완성해주세요.
+
+### **제한사항**
+
+- 0 < `num1` ≤ 100
+- 0 < `num2` ≤ 100
+
+### **입출력 예**
+
+| num1 | num2 | result |
+| --- | --- | --- |
+| 3 | 2 | 1500 |
+| 7 | 3 | 2333 |
+| 1 | 16 | 62 |
+
+### **입출력 예 설명**
+
+입출력 예 #1
+
+- `num1`이 3, `num2`가 2이므로 3 / 2 = 1.5에 1,000을 곱하면 1500이 됩니다.
+
+입출력 예 #2
+
+- `num1`이 7, `num2`가 3이므로 7 / 3 = 2.33333...에 1,000을 곱하면 2333.3333.... 이 되며, 정수 부분은 2333입니다.
+
+입출력 예 #3
+
+- `num1`이 1, `num2`가 16이므로 1 / 16 = 0.0625에 1,000을 곱하면 62.5가 되며, 정수 부분은 62입니다.
+
+## 설계 영역
+1. num1을 num2로 나눈 값 저장하기
+2. 위 값에 1,000 곱하기
+3. Math.floor를 이용해서 정수 부분 return하기
+
+## 결과 코드
+```js
+function solution(num1, num2) {
+    return Math.floor(num1/num2*1000);
+}
+```
+
+---
+
+### **문제 설명**
+
+첫 번째 분수의 분자와 분모를 뜻하는 `numer1`, `denom1`, 두 번째 분수의 분자와 분모를 뜻하는 `numer2`, `denom2`가 매개변수로 주어집니다. 두 분수를 더한 값을 기약 분수로 나타냈을 때 분자와 분모를 순서대로 담은 배열을 return 하도록 solution 함수를 완성해보세요.
+
+### **제한사항**
+
+- 0 <`numer1`, `denom1`, `numer2`, `denom2` < 1,000
+
+### **입출력 예**
+
+| numer1 | denom1 | numer2 | denom2 | result |
+| --- | --- | --- | --- | --- |
+| 1 | 2 | 3 | 4 | [5, 4] |
+| 9 | 2 | 1 | 3 | [29, 6] |
+
+### **입출력 예 설명**
+
+입출력 예 #1
+
+- 1 / 2 + 3 / 4 = 5 / 4입니다. 따라서 [5, 4]를 return 합니다.
+
+입출력 예 #2
+
+- 9 / 2 + 1 / 3 = 29 / 6입니다. 따라서 [29, 6]을 return 합니다.
+
+## 설계 영역
+1. number1 = number1 * denom2
+2. number2 = number2 * denom1
+3. number1과 number2를 더하기
+4. denom1과 denom2를 곱하기
+5. 최대공약수 구하기
+    1. 3,4를 특정 값으로 나눌 수 있다면 최대공약수
+    2. num이나 den중 작은 값을 지나가면 종료
+6. 최대공약수로 나눈 값을 출력
+
+## 결과 코드
+```js
+function solution(numer1, denom1, numer2, denom2) {
+    /*
+## 설계 영역
+1. number1 = number1 * denom2
+2. number2 = number2 * denom1
+3. number1과 number2를 더하기
+4. denom1과 denom2를 곱하기
+5. 최대공약수 구하기
+    1. 3,4를 특정 값으로 나눌 수 있다면 최대공약수
+    2. num이나 den중 작은 값을 지나가면 종료
+6. 최대공약수로 나눈 값을 출력
+    */
+    var answer = [];
+    
+    numer1 *= denom2;
+    numer2 *= denom1;
+    let num = numer1 + numer2;
+    let den = denom1 * denom2;
+    
+    let min = Math.min(num, den);
+    let temp = 1;
+    
+    
+    for(i=1; i<=min; i++){
+        if(Math.floor(num%i) == 0 && Math.floor(den%i) == 0) temp = i;
+    }
+
+    answer.push(num/temp, den/temp);
+    
+    return answer;
+}
+```
+
+## 추가 해결
+유클리드 호제법을 사용하면 빠르게 값을 구할 수 있다고 나와있다.
+
+## 설계 영역
+1. number1 = number1 * denom2
+2. number2 = number2 * denom1
+3. number1과 number2를 더하기
+4. denom1과 denom2를 곱하기
+5. 유클리드 호제법 사용
+6. 최대공약수로 나눈 값을 출력
+
+### 유클리드 호제법 쓰는 방법
+> 두 양의 정수 a,b(a>b) 에 대해서 a = bq + r (0<r<b) 라고 하면, a,b의 최대공약수는 b,r의 최대공약수와 같다.
+gcd(a,b) = gcd(b,r)
+
+gcd(a,b)
+1. a/b, a%b 구하기
+2. a%b != 0이면 재귀를 사용해서 gcd(b,r) 수행
+3. 위가 아니면 a/b 출력
+
+## 첫번째 오류
+```js
+function solution(numer1, denom1, numer2, denom2) {
+    /*
+## 설계 영역
+1. number1 = number1 * denom2
+2. number2 = number2 * denom1
+3. number1과 number2를 더하기
+4. denom1과 denom2를 곱하기
+5. 최대공약수 구하기
+    1. 3,4를 특정 값으로 나눌 수 있다면 최대공약수
+    2. num이나 den중 작은 값을 지나가면 종료
+6. 최대공약수로 나눈 값을 출력
+    */
+    var answer = [];
+    
+    numer1 *= denom2;
+    numer2 *= denom1;
+    let num = numer1 + numer2;
+    let den = denom1 * denom2;
+    
+    temp = gcd(num, den);
+
+    answer.push(num/temp, den/temp);
+    
+    return answer;
+}
+
+/*
+gcd(a,b)
+1. a/b, a%b 구하기
+2. a%b != 0이면 재귀를 사용해서 gcd(b,r) 수행
+3. 위가 아니면 a/b 출력
+*/
+
+function gcd(a, b){
+    num1 = Math.floor(a/b);
+    r = a%b;
+    
+    if(r != 0) return gcd(b, r);
+    else return num1;
+}
+```
+
+일단 gcd를 잘못한 거 같긴 한데... 잘 생각해봐야겠다.
+
+## 정답
+```js
+function solution(numer1, denom1, numer2, denom2) {
+    /*
+## 설계 영역
+1. number1 = number1 * denom2
+2. number2 = number2 * denom1
+3. number1과 number2를 더하기
+4. denom1과 denom2를 곱하기
+5. 최대공약수 구하기
+    1. 3,4를 특정 값으로 나눌 수 있다면 최대공약수
+    2. num이나 den중 작은 값을 지나가면 종료
+6. 최대공약수로 나눈 값을 출력
+    */
+    var answer = [];
+    
+    numer1 *= denom2;
+    numer2 *= denom1;
+    let num = numer1 + numer2;
+    let den = denom1 * denom2;
+    
+    temp = gcd(num, den);
+
+    answer.push(num/temp, den/temp);
+    
+    return answer;
+}
+
+/*
+gcd(a,b)
+1. a%b != 0이면 재귀를 사용해서 gcd(b,r) 수행
+2. 위가 아니면 b return
+*/
+
+function gcd(a, b){
+    r = a%b;
+    
+    if(r != 0) return gcd(b, r);
+    else return b;
+}
+```
+
+손으로 하나하나 해보다보니 이해가 쏙쏙 되었다.
+
+---
+
+
+### **문제 설명**
+
+정수 배열 `numbers`가 매개변수로 주어집니다. `numbers`의 각 원소에 두배한 원소를 가진 배열을 return하도록 solution 함수를 완성해주세요.
+
+### **제한사항**
+
+- 10,000 ≤ `numbers`의 원소 ≤ 10,000
+- 1 ≤ `numbers`의 길이 ≤ 1,000
+
+### **입출력 예**
+
+| numbers | result |
+| --- | --- |
+| [1, 2, 3, 4, 5] | [2, 4, 6, 8, 10] |
+| [1, 2, 100, -99, 1, 2, 3] | [2, 4, 200, -198, 2, 4, 6] |
+
+### **입출력 예 설명**
+
+입출력 예 #1
+
+- [1, 2, 3, 4, 5]의 각 원소에 두배를 한 배열 [2, 4, 6, 8, 10]을 return합니다.
+
+입출력 예 #2
+
+- [1, 2, 100, -99, 1, 2, 3]의 각 원소에 두배를 한 배열 [2, 4, 200, -198, 2, 4, 6]을 return합니다.
+
+## 설계 영역
+1. foreach문을 이용
+2. 순차적으로 곱해서 새 배열에 넣기
+
+## 결과 코드
+
+```js
+function solution(numbers) {
+    var answer = [];
+    
+    numbers.forEach(number => {
+        answer.push(number*2);
+    });
+    
+    return answer;
+}
+```
+
+
+## 느낀점
+1. forEach문에 대해서 알고 사용 가능해졌다.
